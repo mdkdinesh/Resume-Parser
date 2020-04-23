@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #00C1E7;
+}
+</style>
+</head>
+<body>
+{% block content %}
+<center>
+<br><br><br><br>
+<h1>Resume Parsing by<br></h1>
+<h1 style="font:sans-serif">MDK FLASH</h1>
+<br><br><br><br>
+<p>Click on the "Choose File" button to upload a file:</p>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" id="myFile" name="document">
+    <button type="submit">Upload</button>
+    </form>
+</center>
+{% endblock %}
+</body>
+</html>
